@@ -1,0 +1,19 @@
+Import Pustaka:
+
+from gpio import *: Mengimpor semua fungsi dan konstanta dari pustaka GPIO untuk mengontrol pin GPIO pada perangkat.
+from time import *: Mengimpor semua fungsi dari pustaka time untuk pengaturan waktu.
+Fungsi Sensor Gerakan:
+
+sensorGerakan(): Fungsi ini dibuat untuk memeriksa status sensor gerakan.
+Membaca nilai dari pin GPIO 0.
+Jika nilai adalah 0, mencetak "tidak ada gerakan" dan mengirimkan sinyal khusus melalui customWrite ke pin GPIO 1 dan 2.
+Jika nilai bukan 0, mencetak "ada gerakan" dan juga mengirimkan sinyal khusus melalui customWrite ke pin GPIO 1 dan 2.
+Fungsi Main:
+
+main(): Fungsi utama program.
+Menambahkan deteksi peristiwa pada pin GPIO 0, yang akan memanggil fungsi sensorGerakan saat ada perubahan pada pin tersebut.
+Melakukan perulangan tak terbatas untuk menjaga program berjalan.
+Delay 1000ms (1 detik) sebelum melakukan iterasi berikutnya.
+Pemanggilan Utama:
+
+Menjalankan fungsi main saat program dieksekusi.
